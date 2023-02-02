@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AI_IdleState : AIState
 {
-    protected override string AnimationKey { get => ANIMATION_KEY; set => Debug.Log("Cannot Set This Value"); }
+    protected override string _animationKey { get => ANIMATION_KEY; set => Debug.Log("Cannot Set This Value"); }
 
     private const string ANIMATION_KEY = "Idle";
 

@@ -5,7 +5,7 @@ public abstract class AIState : MonoBehaviour
     protected AI _ai;
     protected AIState_Initializer _initializer;
 
-    protected abstract string AnimationKey { get; set; }
+    protected abstract string _animationKey { get; set; }
     protected Animator _animator;
 
     private void Awake()
@@ -17,7 +17,7 @@ public abstract class AIState : MonoBehaviour
 
     public virtual void OnStateEnter(params object[] parameters)
     {
-        int _animationHash = Animator.StringToHash(AnimationKey);
+        int _animationHash = Animator.StringToHash(_animationKey);
         _animator.Play(_animationHash);
     }
 

@@ -9,7 +9,7 @@ public class AI_WalkState : AIState
         public Vector3 _targetPoint;
     }
 
-    protected override string AnimationKey { get => ANIMATION_NAME; set => Debug.Log("Cannot Set This Value"); }
+    protected override string _animationKey { get => ANIMATION_NAME; set => Debug.Log("Cannot Set This Value"); }
 
     private const string ANIMATION_NAME = "Walk";
 

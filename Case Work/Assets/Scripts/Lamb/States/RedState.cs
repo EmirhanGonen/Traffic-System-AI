@@ -45,7 +45,7 @@ public class RedState : LambState
 
         if (cars.Count == 0) return;
 
-        float z = 0;
+        float x = 0, z = 0;
 
         for (int i = 0; i < cars.Count; i++)
         {
@@ -55,9 +55,10 @@ public class RedState : LambState
             z += i > 1 & mod == 0 ? distanceZ : 0;
             x = mod * distanceX;*/
 
-            z += i > 0 ? -5 : 0;
+            x += transform.rotation.y == 180 ? (i > 0 ? -5 : 0) : 0;
+            z += transform.rotation.y == 90 ? (i > 0 ? -5 : 0) : 0;
 
-            Vector3 movePoint = new(_beginX, cars[i].transform.position.y, _beginZ + z);
+            Vector3 movePoint = new(_beginX + x, cars[i].transform.position.y, _beginZ + z);
 
             MoveState.MoveStateVariables _tempMoveStateVariables = new()
             {

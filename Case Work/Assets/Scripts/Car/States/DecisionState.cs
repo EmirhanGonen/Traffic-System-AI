@@ -21,7 +21,6 @@ public class DecisionState : CarState
 
     private void Decide()
     {
-        /*if (_isFirstDecide)*/ 
         _carBehaviour.transform.position = _carBehaviour.CurrentSelectedPath.transform.GetChild(_carBehaviour.PathChildIndex).position;
 
         MoveState _moveState = _carStateInitializer.States[typeof(MoveState)] as MoveState;
