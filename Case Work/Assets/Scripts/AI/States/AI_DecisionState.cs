@@ -31,9 +31,6 @@ public class AI_DecisionState : AIState
 
     public Vector3 GetRandomPoint(Vector3 center, float maxDistance)
     {
-        //if (!_canGetRandomPosition) return _agent.destination;
-
-        //_canGetRandomPosition = false;
 
         Vector3 randomPos = Random.insideUnitSphere * maxDistance + center;
 

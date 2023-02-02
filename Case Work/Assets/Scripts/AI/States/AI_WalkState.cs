@@ -9,8 +9,6 @@ public class AI_WalkState : AIState
         public Vector3 _targetPoint;
     }
 
-
-
     protected override string AnimationKey { get => ANIMATION_NAME; set => Debug.Log("Cannot Set This Value"); }
 
     private const string ANIMATION_NAME = "Walk";
@@ -19,10 +17,6 @@ public class AI_WalkState : AIState
     private NavMeshAgent _navMeshAgent;
     private Vector3 _targetPoint;
 
-
-    private void Start()
-    {
-    }
     public override void OnStateEnter(params object[] parameters)
     {
         _navMeshAgent = _ai.GetComponent<NavMeshAgent>();
